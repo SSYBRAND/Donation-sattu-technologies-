@@ -1,0 +1,112 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donation Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    button, input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: #4CAF50;
+        color: white;
+    }
+    button:hover, input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    #qrCode {
+        display: none;
+    }
+    #qrImage {
+        width: 300px;
+        height: 300px;
+    }
+    #upiId {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 80%;
+        max-width: 300px;
+    }
+    #upiIdText {
+        font-size: 14px;
+        color: #666;
+    }
+</style>
+</head>
+<body>
+  <center>
+    <img src="https://i.pinimg.com/originals/f8/c4/22/f8c422a0a0e6793b3f9113d419c5143a.gif"width="100%">
+  </center>
+
+<div class="container">
+    <h2><font color=orange>SSY BRAND ❣️</font></h2>
+    <h3>Choose Your Donation Method:</h3>
+    <center>Click Generate Button for Payment 👇👇</center>
+    <br></br>
+    <button id="qrBtn" onclick="showQR()">Generate Q.R Code</button>
+    <div id="qrCode">
+        <img id="qrImage" src="" alt="QR Code">
+        <div id="timer">Time remaining: <span id="countdown">120</span> seconds</div>
+    </div>
+    <br></br>
+      <br></br>
+    <p id="upiIdText">UPI ID for payment 👇👇:</p>
+    <input type="text" id="upiId" value="sattu0001@axl" readonly>
+<font color=red>Note:-</font>&nbsp; Kindly don't share your otp to anyone as without sattu technologies information Id card.<br><font color=Blue><b>Thanking you</b></font> 
+</div>
+<br></br>
+<center>
+  <font color=Green>Always Remember this Point During transection 🦄</font>
+  <br></br>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmmL0-EcRPYSGjSMQNrTVx8v7_TdsD6B1NhnqjiyKXPlhp8PDhuGFnaIc&s=10" width="95%">
+</center>
+<script>
+function showQR() {
+    document.getElementById("qrCode").style.display = "block";
+    document.getElementById("qrImage").src = "https://i.ibb.co/MRMc40L/download.png";
+    var timeleft = 120; // 2 minutes
+    var countdownTimer = setInterval(function(){
+        if(timeleft <= 0){
+            clearInterval(countdownTimer);
+            document.getElementById("qrCode").style.display = "none";
+        } else {
+            document.getElementById("countdown").textContent = timeleft;
+        }
+        timeleft -= 1;
+    }, 1000);
+}
+</script>
+<br></br>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            background: linear-gradient(to right, #ff4d4d, #4d79ff, #4dff4d);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+
+    <footer>
+       <p><font color=aqua><center><strong>SSY BRAND ❣️</strong ></center></p></font>
+        <p>• Design interface BY :- Sattu technologies ✓</p>
+    </footer>
+
+</body>
+</html>
